@@ -37,7 +37,7 @@ const RandomImageDisplay = () => {
             {console.log('Image URL:', `https://mongo-imageuploader.onrender.com/images/${randomImage.name}`)}
             <img
               key={imageKey} // Add a key to force re-render
-              src={`http://localhost:3000/images/${randomImage.name}`}
+              src={`https://mongo-imageuploader.onrender.com/images/${randomImage.name}`}
               alt=""
             />
           </>
