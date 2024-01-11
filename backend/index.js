@@ -11,8 +11,8 @@ app.use(cors());
 
 app.use('/images', express.static('images'));
 
+
 const port = process.env.PORT || 3000
-clea
 const storage = multer.diskStorage({
   destination: (req, file, cb) => {
     cb(null, 'images');
