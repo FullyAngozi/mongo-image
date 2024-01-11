@@ -65,7 +65,7 @@ app.post('/upload', uploads.single('image'), async (req, res) => {
         const newImage = new Image({
           name: originalname,
           data: buffer,
-          contentType: mimetype,
+          contentType: mimetype/javascript,
         });
     
         await newImage.save();
