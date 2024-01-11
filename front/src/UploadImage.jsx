@@ -15,7 +15,7 @@ const ImageUpload = () => {
       const formData = new FormData();
       formData.append('image', selectedFile);
 
-      const response = await axios.post('http://localhost:3000/upload', formData, {
+      const response = await axios.post('https://mongo-imageuploader.onrender.com/upload', formData, {
         headers: {
           'Content-Type': 'multipart/form-data',
         },

@@ -7,7 +7,7 @@ const RandomImageDisplay = () => {
 
   const fetchRandomImage = async () => {
     try {
-      const response = await fetch("http://localhost:3000/randomImage");
+      const response = await fetch("https://mongo-imageuploader.onrender.com/randomImage");
       if (!response.ok) {
         throw new Error(`HTTP error! Status: ${response.status}`);
       }
@@ -34,7 +34,7 @@ const RandomImageDisplay = () => {
           <p className="text-red-500">{error}</p>
         ) : randomImage ? (
           <>
-            {console.log('Image URL:', `http://localhost:3000/images/${randomImage.name}`)}
+            {console.log('Image URL:', `https://mongo-imageuploader.onrender.com/images/${randomImage.name}`)}
             <img
               key={imageKey} // Add a key to force re-render
               src={`http://localhost:3000/images/${randomImage.name}`}
