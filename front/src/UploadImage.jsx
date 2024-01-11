@@ -18,6 +18,7 @@ const ImageUpload = () => {
       const response = await axios.post('https://mongo-imageuploader.onrender.com/upload', formData, {
         headers: {
           'Content-Type': 'multipart/form-data',
+          "Accept": "application/javascript"
         },
       });
 
