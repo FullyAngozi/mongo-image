@@ -12,7 +12,7 @@ app.use(cors());
 app.use('/images', express.static('images'));
 
 const port = process.env.PORT || 3000
-
+clea
 const storage = multer.diskStorage({
   destination: (req, file, cb) => {
     cb(null, 'images');
@@ -35,6 +35,7 @@ mongodb.once("open", () => {
 
 app.get("/", (req, res) => {
   res.json("We're running on port 3000");
+  res.setHeader('Content-Type', 'application/javascript');
 });
 
 app.get('/randomImage', async (req, res) => {
