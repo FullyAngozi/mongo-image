@@ -9,7 +9,7 @@ require("dotenv").config();
 const app = express();
 app.use(cors());
 
-app.use('/images', express.static('images'));
+app.use('/images', express.static('images'))
 
 
 const port = process.env.PORT || 3000
@@ -66,7 +66,6 @@ app.post('/upload', uploads.single('image'), async (req, res) => {
         const newImage = new Image({
           name: originalname,
           data: buffer,
-          contentType: mimetype/javascript,
         });
     
         await newImage.save();
